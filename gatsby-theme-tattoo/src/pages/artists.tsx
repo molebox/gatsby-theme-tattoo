@@ -3,11 +3,11 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
 
-const home = ["T", "A", "T", "T", "O", "O"];
+const artists = ["A", "R", "T", "I", "S", "T", "S"];
 
-export const Index = () => (
+export const Artists = () => (
   <Layout>
-    <Sidebar letters={home} />
+    <Sidebar letters={artists} />
     <Main>
       <div
         style={{
@@ -15,10 +15,10 @@ export const Index = () => (
           justifyContent: "center"
         }}
       >
-        <h1>Main content here</h1>
+        <h1>Artists Page</h1>
       </div>
     </Main>
   </Layout>
 );
 
-export default Index;
+export default Artists;

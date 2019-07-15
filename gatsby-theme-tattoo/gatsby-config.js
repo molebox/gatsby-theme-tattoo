@@ -12,6 +12,15 @@ module.exports = {
             }
         },
         {
+            resolve: 'gatsby-plugin-google-fonts',
+            options: {
+              fonts: [
+                `Montserrat`,
+                `source sans pro\:300,400,400i,700` 
+              ]
+            }
+        },
+        {
             resolve: 'gatsby-plugin-compile-es6-packages',
             options: {
               modules: [pkg.name]
