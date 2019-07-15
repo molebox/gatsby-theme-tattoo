@@ -2,23 +2,12 @@ import * as React from "react";
 import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
-import Card from "../components/Card";
 
-const home = ["T", "A", "T", "T", "O", "O"];
+const gallery = ["G", "A", "L", "L", "E", "R", "Y"];
 
-const cards = [
-  <Card>
-    <h3>Card One</h3>
-    <h3>Card Two</h3>
-    <h3>Card Three</h3>
-    <h3>Card Four</h3>
-    <h3>Card Five</h3>
-  </Card>
-];
-
-export const Index = () => (
+export const Gallery = () => (
   <Layout>
-    <Sidebar letters={home} />
+    <Sidebar letters={gallery} />
     <Main>
       <div
         style={{
@@ -26,10 +15,10 @@ export const Index = () => (
           justifyContent: "center"
         }}
       >
-        {cards}
+        <h1>Styles Page</h1>
       </div>
     </Main>
   </Layout>
 );
 
-export default Index;
+export default Gallery;

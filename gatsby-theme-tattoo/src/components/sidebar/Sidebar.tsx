@@ -8,11 +8,12 @@ const Container = styled.div`
   grid-area: sidebar;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-  // grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr;
   grid-template-areas:
     "section section section"
     "key key key";
+
+  border-right: solid 5px black;
 `;
 
 interface Props {

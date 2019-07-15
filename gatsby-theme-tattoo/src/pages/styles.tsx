@@ -3,9 +3,9 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
 
-const artists = ["A", "R", "T", "I", "S", "T", "S"];
+const artists = ["S", "T", "Y", "L", "E", "S"];
 
-export const Artists = () => (
+export const Styles = () => (
   <Layout>
     <Sidebar letters={artists} />
     <Main>
@@ -15,10 +15,10 @@ export const Artists = () => (
           justifyContent: "center"
         }}
       >
-        <h1>Artists Page</h1>
+        <h1>Styles Page</h1>
       </div>
     </Main>
   </Layout>
 );
 
-export default Artists;
+export default Styles;

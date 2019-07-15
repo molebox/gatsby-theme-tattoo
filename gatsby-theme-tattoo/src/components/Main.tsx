@@ -4,7 +4,7 @@ import Navbar from "./navigation/Navbar";
 
 const Conatiner = styled.div`
   grid-area: main;
-  background: tomato;
+  background: #ecebeb;
 
   display: grid;
   grid-template-columns: 1fr;

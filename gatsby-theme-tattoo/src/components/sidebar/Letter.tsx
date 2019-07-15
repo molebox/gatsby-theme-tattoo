@@ -13,7 +13,7 @@ const Letter = ({ children }: Props) => (
       font-weight: bold;
       font-size: 9em;
       line-height: 100%;
-      margin: 20px;
+      margin: 0 20px 0 20px;
       padding: 0;
       display: flex;
       align-items: center;
