@@ -13,7 +13,7 @@ const Container = styled.div`
     "section section section"
     "key key key";
 
-  border-right: solid 5px black;
+  border-right: solid 3px black;
 `;
 
 interface Props {

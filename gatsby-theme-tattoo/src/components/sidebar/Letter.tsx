@@ -10,8 +10,8 @@ const Letter = ({ children }: Props) => (
   <div
     css={css`
       grid-area: letter;
-      font-weight: bold;
-      font-size: 9em;
+      font-weight: 300;
+      font-size: 7em;
       line-height: 100%;
       margin: 0 20px 0 20px;
       padding: 0;

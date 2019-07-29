@@ -27,6 +27,10 @@ var _publicPageRenderer = _interopRequireDefault(require("./public-page-renderer
 
 exports.PageRenderer = _publicPageRenderer.default;
 
+var _loader = require("./loader");
+
+exports.prefetchPathname = _loader.enqueue;
+
 const StaticQueryContext = _react.default.createContext({});
 
 exports.StaticQueryContext = StaticQueryContext;

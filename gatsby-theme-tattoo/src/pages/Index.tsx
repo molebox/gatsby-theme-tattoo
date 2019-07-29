@@ -6,13 +6,18 @@ import Card from "../components/Card";
 
 const home = ["T", "A", "T", "T", "O", "O"];
 
-const cards = [
+export const cards = [
   <Card>
     <h3>Card One</h3>
+  </Card>,
+  <Card>
     <h3>Card Two</h3>
+  </Card>,
+  <Card>
     <h3>Card Three</h3>
+  </Card>,
+  <Card>
     <h3>Card Four</h3>
-    <h3>Card Five</h3>
   </Card>
 ];
 
