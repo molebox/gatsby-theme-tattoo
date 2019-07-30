@@ -14,6 +14,7 @@ const Container = styled.div`
     "key key key";
 
   border-right: solid 3px black;
+  background: #ecebeb;
 `;
 
 interface Props {
@@ -30,12 +31,12 @@ const Sidebar = ({ letters }: Props) => (
       ))}
     </Section>
     <Key>
-      <ul>
+      {/* <ul>
         <li>this</li>
         <li>is</li>
         <li>a</li>
         <li>list</li>
-      </ul>
+      </ul> */}
     </Key>
   </Container>
 );

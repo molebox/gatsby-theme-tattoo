@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
 const Nav = styled.nav`
+
   & ul {
     list-style: none;
     background-color: #ecebeb;
@@ -21,6 +22,7 @@ const Nav = styled.nav`
   }
 
   & a {
+    font-family: Montserrat;
     text-decoration: none;
     color: black;
     display: block;
@@ -29,7 +31,7 @@ const Nav = styled.nav`
   }
 
   & a:hover {
-    background-color: white;
+    background-color: #E5A0A7;
   }
    
   & a.active {
@@ -40,6 +42,7 @@ const Nav = styled.nav`
 
 
   @media (min-width: 600px) {
+
     & li {
       width: 150px;
       border-bottom: none;

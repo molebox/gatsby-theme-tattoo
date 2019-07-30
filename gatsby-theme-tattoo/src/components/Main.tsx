@@ -1,10 +1,11 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import Navbar from "./navigation/Navbar";
+import Footer from "./Footer";
 
-const Conatiner = styled.div`
+const Container = styled.div`
   grid-area: main;
-  background: #ecebeb;
+  background: white;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -14,15 +15,34 @@ const Conatiner = styled.div`
     "content";
 `;
 
+const Content = styled.div`
+  grid-area: content;
+`;
+
+const Text = styled.h1`
+  font-family: Montserrat;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 110%;
+  letter-spacing: 2px;
+  color: #570b12;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+`;
+
 interface Props {
   children: React.ReactNode;
 }
 
 const Main = ({ children }: Props) => (
-  <Conatiner>
+  <Container>
     <Navbar />
-    {children}
-  </Conatiner>
+    <Content>{children}</Content>
+    <Footer>
+      <Text>Created with Gatsby</Text>
+    </Footer>
+  </Container>
 );
 
 export default Main;

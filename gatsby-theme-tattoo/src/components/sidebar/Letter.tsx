@@ -13,14 +13,15 @@ const Letter = ({ children }: Props) => (
       font-weight: 300;
       font-size: 7em;
       line-height: 100%;
-      margin: 0 20px 0 20px;
+      margin: 0 2px 0 2px;
       padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: black;
+      color: #570b12;
       height: 100%;
       flex-grow: 1;
+      font-family: Montserrat;
 
       @media (max-width: 920px) {
         font-size: 3em;

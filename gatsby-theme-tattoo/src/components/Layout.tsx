@@ -20,7 +20,6 @@ const Layout = ({ children }: Props) => (
         body {
           margin: 0;
           padding: 0;
-          font-family: Montserrat;
         }
       `}
     />

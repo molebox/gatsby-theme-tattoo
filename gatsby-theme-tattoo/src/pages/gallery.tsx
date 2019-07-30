@@ -2,7 +2,7 @@ import * as React from "react";
 import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
-import { cards } from "./index";
+import { Grid } from "@horacioh/gatsby-theme-instagram";
 
 const gallery = ["G", "A", "L", "L", "E", "R", "Y"];
 
@@ -12,12 +12,11 @@ export const Gallery = () => (
     <Main>
       <div
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center"
+          margin: "0 20px 0 20px",
+          padding: "0 20px 0 20px"
         }}
       >
-        {cards}
+        <Grid />
       </div>
     </Main>
   </Layout>

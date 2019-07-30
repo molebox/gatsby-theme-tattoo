@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import styled from "@emotion/styled";
 
 interface Props {
   children: React.ReactNode;
@@ -9,11 +8,15 @@ interface Props {
 const Card = ({ children }: Props) => (
   <div
     css={css`
-      box-shadow: 15px 11px 12px 13px hsla(0, 0%, 0%, 0.1);
+      box-shadow: 7px 5px 8px 2px hsla(0, 0%, 0%, 0.27);
       margin: 20px;
       padding: 20px;
       height: 300px;
       width: 300px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      font-family: Montserrat;
     `}
   >
     {children}
