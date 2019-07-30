@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "project": {
+    "name": "gatsby-theme-tatto"
+  },
+  "api": {
+    "projectId": "y7gu5bd3",
+    "dataset": "gatsby-theme-tattoo"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    }
+  ]
+}

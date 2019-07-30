@@ -2,6 +2,9 @@ var plugins = [{
       plugin: require('D:/HUNGRYBEARSTUDIO/GATSBY-THEMES/gatsby-theme-tattoo/node_modules/gatsby-plugin-theme-ui/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('D:/HUNGRYBEARSTUDIO/GATSBY-THEMES/gatsby-theme-tattoo/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      options: {"plugins":[],"projectId":"y7gu5bd3","dataset":"gatsby-theme-tattoo","watchMode":true},
+    },{
       plugin: require('D:/HUNGRYBEARSTUDIO/GATSBY-THEMES/gatsby-theme-tattoo/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["Montserrat","Oswald","source sans pro:300,400,400i,700"]},
     }]
