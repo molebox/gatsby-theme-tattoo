@@ -3,10 +3,11 @@ import { jsx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 const Box = styled.footer`
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   height: 10em;
-  border-top: solid 3px black;
+  // border-top: solid 3px black;
   background-color: #ecebeb;
 `;
 

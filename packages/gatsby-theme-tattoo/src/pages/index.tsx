@@ -9,7 +9,7 @@ const home = ["H", "O", "M", "E"];
 
 const Title = styled.h1`
   font-family: Montserrat;
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 400;
   line-height: 110%;
   letter-spacing: 2px;
@@ -29,19 +29,19 @@ const Title = styled.h1`
 
 const Content = styled.div`
   display: flex;
-  // align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  padding: 0;
 `;
 
-const SubTitle = styled.h4`
+export const SubTitle = styled.h4`
   font-family: Oswald;
-  font-size: 3em;
-  font-weight: 700;
+  font-size: 2em;
+  font-weight: 300;
   line-height: 110%;
   letter-spacing: 2px;
 
-  margin: 0px 150px 0px 150px;
+  margin: 0px 350px 0px 350px;
   padding: 10px;
 
   @media (max-width: 920px) {

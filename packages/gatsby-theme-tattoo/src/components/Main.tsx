@@ -13,10 +13,13 @@ const Container = styled.div`
   grid-template-areas:
     "nav"
     "content";
+
+  height: 100%;
 `;
 
-const Content = styled.div`
+const Content = styled.main`
   grid-area: content;
+  // height: 100vh;
 `;
 
 const Text = styled.h1`
@@ -39,9 +42,9 @@ const Main = ({ children }: Props) => (
   <Container>
     <Navbar />
     <Content>{children}</Content>
-    <Footer>
-      <Text>Created with Gatsby</Text>
-    </Footer>
+    {/* <Footer>
+      <Text>Created with Gatsby & Sanity.io</Text>
+    </Footer> */}
   </Container>
 );
 

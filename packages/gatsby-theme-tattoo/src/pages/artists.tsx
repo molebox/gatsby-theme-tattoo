@@ -4,13 +4,15 @@ import styled from "@emotion/styled";
 import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
+import { Link } from "gatsby";
 
 const artists = ["A", "R", "T", "I", "S", "T", "S"];
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 15px;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.1em;
   margin: 0 auto;
 `;
 
@@ -110,7 +112,7 @@ export const Artists = () => (
         <Box>
           <div className="imgBx">image here</div>
           <div className="details">
-            <h2>Artist One</h2>
+            <Link to="/artistInfo">Artist One</Link>
           </div>
         </Box>
         <Box>

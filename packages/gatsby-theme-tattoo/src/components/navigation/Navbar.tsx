@@ -1,9 +1,12 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
 const Nav = styled.nav`
+
+  grid-area: nav;
+  
 
   & ul {
     list-style: none;
@@ -11,14 +14,13 @@ const Nav = styled.nav`
     text-align: center;
     padding: 0;
     margin: 0;
-    border-bottom: solid 3px black;
+    height: 50px;
   }
 
   & li {
     font-size: 1.2em;
     line-height: 40px;
-    height: 40px;
-    border-bottom: 1px solid black;
+    align-self: center;
   }
 
   & a {
@@ -56,24 +58,22 @@ const Nav = styled.nav`
 `;
 
 const Navbar = () => (
-  <header>
-    <Nav>
-      <ul>
-        <li>
-          <Link to="/">HOME</Link>
-        </li>
-        <li>
-          <Link to="/artists">ARTISTS</Link>
-        </li>
-        <li>
-          <Link to="/styles">STYLES</Link>
-        </li>
-        <li>
-          <Link to="/gallery">GALLERY</Link>
-        </li>
-      </ul>
-    </Nav>
-  </header>
+  <Nav>
+    <ul>
+      <li>
+        <Link to="/">HOME</Link>
+      </li>
+      <li>
+        <Link to="/artists">ARTISTS</Link>
+      </li>
+      <li>
+        <Link to="/styles">STYLES</Link>
+      </li>
+      <li>
+        <Link to="/gallery">GALLERY</Link>
+      </li>
+    </ul>
+  </Nav>
 );
 
 export default Navbar;

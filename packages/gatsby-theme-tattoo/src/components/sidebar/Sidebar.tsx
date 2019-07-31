@@ -8,13 +8,20 @@ const Container = styled.div`
   grid-area: sidebar;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
   grid-template-areas:
-    "section section section"
-    "key key key";
+    "."
+    "section"
+    "key"
+    ".";
 
   border-right: solid 3px black;
   background: #ecebeb;
+  // height: 110vh;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 `;
 
 interface Props {
@@ -30,9 +37,7 @@ const Sidebar = ({ letters }: Props) => (
         </div>
       ))}
     </Section>
-    <Key>
-      <h3>Add logo here ?</h3>
-    </Key>
+    <Key>{/* <h3>Add logo here ?</h3> */}</Key>
   </Container>
 );
 
