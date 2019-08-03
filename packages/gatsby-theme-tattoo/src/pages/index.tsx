@@ -4,6 +4,8 @@ import Layout from "../components/Layout";
 import Main from "../components/Main";
 import styled from "@emotion/styled";
 import { useSiteMetadata } from "./../utils/hooks";
+import { graphql, useStaticQuery } from "gatsby";
+import Image from "gatsby-image";
 
 const home = ["H", "O", "M", "E"];
 
@@ -55,15 +57,47 @@ export const SubTitle = styled.h4`
   }
 `;
 
+export const query = graphql`
+  query MyQuery {
+    allSanityHomePage {
+      edges {
+        node {
+          title
+          slug {
+            current
+          }
+          mainImage {
+            asset {
+              fluid {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const Index = () => {
-  const { title, description } = useSiteMetadata();
+  // const { title, description } = useSiteMetadata();
+  const sanity = useStaticQuery(query);
+  const edges = sanity.allSanityHomePage.edges;
+  console.log({ sanity });
   return (
     <Layout>
       <Sidebar letters={home} />
       <Main>
         <Content>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
+          {/* <Title>TEST</Title> */}
+          {/* <Image fluid={data.allSanityHomePage.mainImage.asset.fluid} /> */}
+          {edges.map(({ node }) => (
+            <>
+              <Title>{node.title}</Title>
+              <Image fluid={node.mainImage.asset.fluid} />
+            </>
+          ))}
+          <SubTitle>TEST</SubTitle>
         </Content>
       </Main>
     </Layout>

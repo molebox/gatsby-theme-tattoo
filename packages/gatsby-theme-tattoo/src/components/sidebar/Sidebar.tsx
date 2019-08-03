@@ -31,8 +31,8 @@ interface Props {
 const Sidebar = ({ letters }: Props) => (
   <Container>
     <Section>
-      {letters.map(letter => (
-        <div>
+      {letters.map((letter, index) => (
+        <div key={index}>
           <Letter>{letter}</Letter>
         </div>
       ))}
