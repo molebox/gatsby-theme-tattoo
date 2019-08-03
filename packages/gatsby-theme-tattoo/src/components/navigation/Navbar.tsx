@@ -1,79 +1,98 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core";
+import * as React from "react";
+import { bubble as Menu } from "react-burger-menu";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
-const Nav = styled.nav`
-
-  grid-area: nav;
-  
-
-  & ul {
-    list-style: none;
-    background-color: #ecebeb;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    height: 50px;
-  }
-
-  & li {
-    font-size: 1.2em;
-    line-height: 40px;
-    align-self: center;
-  }
-
-  & a {
+const Styles = styled.div`
+  .bm-item {
     font-family: Montserrat;
+    letter-spacing: 3px;
+    text-align: center;
+    display: inline-block;
     text-decoration: none;
-    color: black;
-    display: block;
-    transition: .3s background-color;
-    letter-spacing: 2px;
+    margin-bottom: 5vh;
+    color: #d1d1d1;
+    transition: color 0.2s;
+    outline: 0;
   }
 
-  & a:hover {
-    background-color: #E5A0A7;
+  .bm-item:focus,
+  .bm-burger-button:focus,
+  .bm-burger-bars:focus,
+  .bm-cross-button:focus,
+  .bm-cross:focus {
+    outline: 0;
+    border: 0;
   }
-   
-  & a.active {
-    background-color: #fff;
-    color: #444;
-    cursor: default;
+
+  .bm-item:active,
+  .bm-burger-button:active,
+  .bm-burger-bars:active,
+  .bm-cross-button:active,
+  .bm-cross:active {
+    outline: 0;
+    border: 0;
   }
 
+  .bm-item:hover {
+    color: #ecebeb;
+  }
+  .bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 20px;
+    right: 2vw;
+    top: 2vh;
+    outline: 0;
+  }
 
-  @media (min-width: 600px) {
+  .bm-burger-bars {
+    background: #570b12;
+    outline: 0;
+  }
+  .bm-cross-button {
+    height: 30px;
+    width: 15px;
+    outline: 0;
+  }
+  .bm-cross {
+    background: #bdc3c7;
+    outline: 0;
+  }
+  .bm-menu {
+    background: rgba(0, 0, 0, 1.3);
+    padding: 3.5em 2.5em 0;
+    font-size: 2em;
+  }
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  .bm-item-list {
+    color: #b8b7ad;
+  }
 
-    & li {
-      width: 150px;
-      border-bottom: none;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.4em;
-
-      display: inline-block;
-      margin-right: -4px;
-    }
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
 `;
 
-const Navbar = () => (
-  <Nav>
-    <ul>
-      <li>
-        <Link to="/">HOME</Link>
-      </li>
-      <li>
-        <Link to="/artists">ARTISTS</Link>
-      </li>
-      <li>
-        <Link to="/styles">STYLES</Link>
-      </li>
-      <li>
-        <Link to="/gallery">GALLERY</Link>
-      </li>
-    </ul>
-  </Nav>
-);
-
-export default Navbar;
+export default (props: any) => {
+  return (
+    <Styles>
+      <Menu {...props} right>
+        <Link className="menu-item" to="/">
+          HOME
+        </Link>
+        <Link className="menu-item" to="/artists">
+          ARTISTS
+        </Link>
+        <Link className="menu-item" to="/styles">
+          STYLES
+        </Link>
+        <Link className="menu-item" to="/gallery">
+          GALLERY
+        </Link>
+      </Menu>
+    </Styles>
+  );
+};

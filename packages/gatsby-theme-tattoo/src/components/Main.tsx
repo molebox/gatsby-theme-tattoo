@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import Navbar from "./navigation/Navbar";
-import Footer from "./Footer";
+// import Navbar from "./navigation/Navbar";
+// import Footer from "./Footer";
+import Nav from "./navigation/Navbar";
 
 const Container = styled.div`
   grid-area: main;
@@ -14,7 +15,7 @@ const Container = styled.div`
     "nav"
     "content";
 
-  height: 100%;
+  height: 100vh;
 `;
 
 const Content = styled.main`
@@ -34,18 +35,32 @@ const Text = styled.h1`
   justify-content: center;
 `;
 
+const MainWrap = styled.div`
+  height: 100vh;
+  //overflow: auto;
+`;
+const PageWrap = styled.div`
+  // text-align: center;
+  overflow: auto;
+  // height: 100vh;
+`;
+
 interface Props {
   children: React.ReactNode;
 }
 
 const Main = ({ children }: Props) => (
-  <Container>
-    <Navbar />
-    <Content>{children}</Content>
-    {/* <Footer>
-      <Text>Created with Gatsby & Sanity.io</Text>
-    </Footer> */}
-  </Container>
+  <MainWrap>
+    <Container>
+      <Nav pageWrapId={"PageWrap"} outerContainerId={"MainWrap"} />
+      <PageWrap>
+        <Content>{children}</Content>
+      </PageWrap>
+      {/* <Footer>
+          <Text>Created with Gatsby & Sanity.io</Text>
+        </Footer> */}
+    </Container>
+  </MainWrap>
 );
 
 export default Main;

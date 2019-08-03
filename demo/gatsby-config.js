@@ -11,7 +11,7 @@ module.exports = {
             resolve: 'gatsby-theme-tattoo',
             options: {
               title: 'Spicy Tattoo',
-              description: 'Spicy jalapeno bacon ipsum dolor amet tri-tip cupidatat officia meatball hamburger flank ribeye pork chop tenderloin. Pariatur turducken shank filet mignon, sunt veniam beef ribs qui adipisicing nostrud alcatra laboris reprehenderit leberkas andouille. Shank flank in chicken shoulder, minim ex qui. Laborum brisket reprehenderit jerky ipsum.',
+              description: 'Spicy jalapeno bacon ipsum dolor amet tri-tip cupidatat officia meatball hamburger flank ribeye pork chop tenderloin. Pariatur turducken shank filet mignon, sunt veniam beef ribs qui adipisicing nostrud alcatra laboris reprehenderit leberkas andouille. Shank flank in chicken shoulder, minim ex qui.',
               SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
               SANITY_PROJECT_DATASET: process.env.SANITY_PROJECT_DATASET
             }
