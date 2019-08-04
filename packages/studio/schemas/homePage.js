@@ -20,11 +20,19 @@ export default {
         {
             name: 'description',
             title: 'Site Description',
-            type: 'blockContent'
+            type: 'text'
         },
         {
             name: 'mainImage',
             title: 'Main image',
+            type: 'image',
+            options: {
+              hotspot: true
+            }
+        },
+        {
+            name: 'logo',
+            title: 'Logo',
             type: 'image',
             options: {
               hotspot: true

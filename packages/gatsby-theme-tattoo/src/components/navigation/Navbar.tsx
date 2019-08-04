@@ -1,5 +1,5 @@
 import * as React from "react";
-import { bubble as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
@@ -14,6 +14,7 @@ const Styles = styled.div`
     color: #d1d1d1;
     transition: color 0.2s;
     outline: 0;
+    font-size: 1em;
   }
 
   .bm-item:focus,
@@ -73,6 +74,17 @@ const Styles = styled.div`
 
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.5em;
+
+    .bm-burger-button {
+      width: 20px;
+      height: 10px;
+      right: 5vw;
+      top: 3vh;
+    }
   }
 `;
 
