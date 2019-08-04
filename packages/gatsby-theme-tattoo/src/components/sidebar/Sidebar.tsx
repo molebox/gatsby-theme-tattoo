@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import Section from "./Section";
-import Key from "./Key";
 import Letter from "./Letter";
 
 const Container = styled.div`
@@ -12,12 +11,11 @@ const Container = styled.div`
   grid-template-areas:
     "."
     "section"
-    "key"
     ".";
 
   border-right: solid 3px black;
   background: #ecebeb;
-  // height: 110vh;
+  height: 110vh;
 
   position: -webkit-sticky;
   position: sticky;
@@ -37,7 +35,6 @@ const Sidebar = ({ letters }: Props) => (
         </div>
       ))}
     </Section>
-    <Key>{/* <h3>Add logo here ?</h3> */}</Key>
   </Container>
 );
 

@@ -42,6 +42,7 @@
         "@emotion/styled": "^10.0.14",
         "@horacioh/gatsby-theme-instagram": "^0.1.6",
         "@types/react-burger-menu": "^2.2.5",
+        "gatsby-image": "^2.2.8",
         "gatsby-plugin-compile-es6-packages": "^1.1.0",
         "gatsby-plugin-emotion": "^4.1.1",
         "gatsby-plugin-google-fonts": "^1.0.1",

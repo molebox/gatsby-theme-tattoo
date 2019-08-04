@@ -1,20 +1,40 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
+import { useStaticQuery } from "gatsby";
+import SocialLink from "./SocialLink";
+import { graphql } from "gatsby";
 
 const Box = styled.footer`
   grid-area: footer;
-  display: flex;
-  flex-direction: column;
-  height: 10em;
-  // border-top: solid 3px black;
+  height: 7em;
   background-color: #ecebeb;
 `;
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Footer = ({ children }: Props) => <Box>{children}</Box>;
+const Footer = () => {
+  const sanity = useStaticQuery(query);
+  const edges = sanity.allSanityHomePage.edges;
+  return (
+    <Box>
+      {edges.map(({ node }: any) => (
+        <SocialLink url={node.url} />
+      ))}
+    </Box>
+  );
+};
 
 export default Footer;
+
+export const query = graphql`
+  query SocialMediaQuery {
+    allSanityHomePage {
+      edges {
+        node {
+          instagram
+          facebook
+          twitter
+        }
+      }
+    }
+  }
+`;

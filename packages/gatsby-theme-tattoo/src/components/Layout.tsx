@@ -7,6 +7,7 @@ const Container = styled.div`
   grid-template-columns: 0.5fr 3fr;
   grid-template-areas: "sidebar main";
   height: 100vh;
+  overflow: hidden;
 `;
 
 interface Props {

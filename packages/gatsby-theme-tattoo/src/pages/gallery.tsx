@@ -3,21 +3,23 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
 import { Grid } from "@horacioh/gatsby-theme-instagram";
+import styled from "@emotion/styled";
 
 const gallery = ["G", "A", "L", "L", "E", "R", "Y"];
+
+const Container = styled.div`
+  // display: flex;
+  // justify-content: center;
+  margin: 5em 2em 2em 2em;
+`;
 
 export const Gallery = () => (
   <Layout>
     <Sidebar letters={gallery} />
     <Main>
-      <div
-        style={{
-          margin: "0 20px 0 20px",
-          padding: "0 20px 0 20px"
-        }}
-      >
+      <Container>
         <Grid />
-      </div>
+      </Container>
     </Main>
   </Layout>
 );

@@ -14,6 +14,25 @@ const Container = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-gap: 0.1em;
   margin: 0 auto;
+
+  grid-template-areas:
+    "."
+    "bio";
+`;
+
+const Bio = styled.div`
+  grid-area: bio;
+  grid-column-start: span 4;
+  margin: 0 3em 0 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Oswald;
+  font-size: 1.6em;
+  font-weight: 300;
+  line-height: 110%;
+  letter-spacing: 2px;
+  visibility: hidden;
 `;
 
 const Box = styled.div`
@@ -65,6 +84,12 @@ const Box = styled.div`
     bottom: 80px;
   }
 
+  &:focus .imgBx {
+    ${Bio} {
+      visibility: visible;
+    }
+  }
+
   & .imgBx img {
     position: absolute;
     top: 0;
@@ -93,14 +118,6 @@ const Box = styled.div`
     color: #777;
     text-transform: uppercase;
   }
-
-  // & .details h2 span {
-  // font-weight: 700;
-  // font-size: .8em;
-  // color: #9B414A;
-  // display: block;
-  // margin-top: 5px;
-  //  }
 `;
 
 // credit to Manoj Silag for the code pen => https://codepen.io/manojsilag/pen/YBOOmB
@@ -133,6 +150,14 @@ export const Artists = () => (
             <h2>Artist Four</h2>
           </div>
         </Box>
+        <Bio>
+          <h4>
+            Bacon ipsum dolor amet venison pancetta pork loin porchetta jowl
+            ribeye cupim tail rump tri-tip salami bresaola cow buffalo. Ham hock
+            drumstick doner ground round, shoulder short loin ball tip swine
+            sausage meatloaf cow.
+          </h4>
+        </Bio>
       </Container>
     </Main>
   </Layout>

@@ -68,8 +68,8 @@ export const SubTitle = styled.h4`
   padding: 2em;
 
   @media (max-width: 920px) {
-    font-size: 1em;
-    margin: 0 500px 0px 50px;
+    font-size: 0.7em;
+    margin: 0 50px 0px 50px;
   }
 
   @media (max-width: 1024px) {
@@ -85,9 +85,9 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled(Img)`
-  width: 100%;
+  width: 80%;
   height: 40em;
-  margin: 0 2em 5em 2em;
+  margin: 0 2em 3em 2em;
   border: solid 0.1em black;
 
   @media (max-width: 920px) {

@@ -23,6 +23,21 @@ export default {
             type: 'text'
         },
         {
+            name: 'facebook',
+            title: 'Facebook',
+            type: 'string'
+        },
+        {
+            name: 'instagram',
+            title: 'Instagram',
+            type: 'string'
+        },
+        {
+            name: 'twitter',
+            title: 'Twitter',
+            type: 'string'
+        },
+        {
             name: 'mainImage',
             title: 'Main image',
             type: 'image',
