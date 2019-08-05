@@ -89,6 +89,7 @@ const Image = styled(Img)`
   height: 40em;
   margin: 0 2em 3em 2em;
   border: solid 0.1em black;
+  border-radius: 0.4em;
 
   @media (max-width: 920px) {
     height: 20em;

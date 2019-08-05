@@ -24,30 +24,23 @@ const Letter = ({ children }: Props) => (
       flex-grow: 1;
       font-family: Montserrat;
 
-      -webkit-animation: roll-in-top 0.6s ease-out 300ms both;
-      animation: roll-in-top 0.6s ease-out 300ms both;
+      -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1200ms
+        both;
+      animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 1200ms both;
 
-      @-webkit-keyframes roll-in-top {
+      @-webkit-keyframes fade-in {
         0% {
-          -webkit-transform: translateY(-800px) rotate(-540deg);
-          transform: translateY(-800px) rotate(-540deg);
           opacity: 0;
         }
         100% {
-          -webkit-transform: translateY(0) rotate(0deg);
-          transform: translateY(0) rotate(0deg);
           opacity: 1;
         }
       }
-      @keyframes roll-in-top {
+      @keyframes fade-in {
         0% {
-          -webkit-transform: translateY(-800px) rotate(-540deg);
-          transform: translateY(-800px) rotate(-540deg);
           opacity: 0;
         }
         100% {
-          -webkit-transform: translateY(0) rotate(0deg);
-          transform: translateY(0) rotate(0deg);
           opacity: 1;
         }
       }

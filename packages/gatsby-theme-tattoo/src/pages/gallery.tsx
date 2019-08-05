@@ -8,8 +8,6 @@ import styled from "@emotion/styled";
 const gallery = ["G", "A", "L", "L", "E", "R", "Y"];
 
 const Container = styled.div`
-  // display: flex;
-  // justify-content: center;
   margin: 5em 2em 2em 2em;
 `;
 

@@ -5614,6 +5614,11 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+feather-icons-react@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/feather-icons-react/-/feather-icons-react-0.3.2.tgz#fd8f25a0f1b7fc10678839fe5eb2b61be4f92d60"
+  integrity sha512-nob+VhAw9LsTtJqZMDRMCUWTaTiRlIUiwnu9fekuykx9pKLLVb5ZWjPR9wdkFtTYm0lDu3Z2oNJCMhOqKec+QA==
+
 figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"

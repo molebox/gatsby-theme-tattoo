@@ -11,17 +11,9 @@ const Container = styled.div`
     "letter"
     ".";
 
-  // @media (max-width: 620px) {
-  //   grid-template-areas:
-  //     "letter"
-  //     "letter"
-  //     "letter";
-  // }
-
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  // height: 100vh;
 `;
 
 interface Props {

@@ -1,166 +1,233 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
-import { Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import SocialLinks from "./../components/ArtistsSocialLinks";
 
 const artists = ["A", "R", "T", "I", "S", "T", "S"];
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 0.1em;
-  margin: 0 auto;
+  margin: 5em;
+  height: 100%;
 
-  grid-template-areas:
-    "."
-    "bio";
+  // @media (max-width: 1024px) {
+  //   height: 100%;
+  // }
+
+    /* iphone 5 */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+      margin: .1em;
+     }
+
+    /* iphone 6, 6s, 7, 8 */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
+      margin: .5em;
+    }
+
+    /* iphone 6+, 6s+, 7+, 8+ */
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+      margin: .5em;
+     }
+
+     /* Galaxy S5 */
+     @media only screen and (min-device-width: 360px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+       margin .5em;
+     }
+
+    /* iphone X */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+      margin 1em;
+    }
+
+    /* iphone XR */
+    @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) { 
+      margin 1em;
+    }
+
+  //  /* iphone XS */
+  //   @media only screen and (min-device-width : 375px) and (max-device-height : 812px) and (-webkit-device-pixel-ratio : 3) { 
+
+  //   }
+
+  //  /* iphone XS Max */
+  //   @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 3) {
+
+  //    }
 `;
 
-const Bio = styled.div`
-  grid-area: bio;
-  grid-column-start: span 4;
-  margin: 0 3em 0 3em;
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+
+const Column = styled.div`
+  diaplay: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+
+  @media (min-width: 800px) {
+    flex: 1;
+  }
+`;
+
+const PictureBox = styled.div`
+  height: 300px;
+  margin: 1em;
+`;
+
+const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Oswald;
-  font-size: 1.6em;
-  font-weight: 300;
-  line-height: 110%;
-  letter-spacing: 2px;
-  visibility: hidden;
-`;
+  padding: 1em;
 
-const Box = styled.div`
-  position: relative;
-  width: 300px;
-  height: 350px;
-  background: #fff;
-  margin: 0 auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 500ms both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 500ms both;
 
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    background: #fff;
-    transition: 0.5s;
-    z-index: -1;
-  }
-
-  &:hover:before {
-    transform: rotate(20deg);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  &:hover:after {
-    transform: rotate(10deg);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  & .imgBx {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: #222;
-    transition: 0.5s;
-    z-index: 1;
-  }
-
-  &:hover .imgBx {
-    bottom: 80px;
-  }
-
-  &:focus .imgBx {
-    ${Bio} {
-      visibility: visible;
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
-
-  & .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  & .details {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    height: 60px;
-    text-align: center;
-    font-family: Montserrat;
-  }
-
-  & .details h2 {
-    margin: 0;
-    padding: 0;
-    font-weight: 700;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    color: #777;
-    text-transform: uppercase;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
-// credit to Manoj Silag for the code pen => https://codepen.io/manojsilag/pen/YBOOmB
-export const Artists = () => (
-  <Layout>
-    <Sidebar letters={artists} />
-    <Main>
-      <Container>
-        <Box>
-          <div className="imgBx">image here</div>
-          <div className="details">
-            <Link to="/artistInfo">Artist One</Link>
-          </div>
-        </Box>
-        <Box>
-          <div className="imgBx">image here</div>
-          <div className="details">
-            <h2>Artist Two</h2>
-          </div>
-        </Box>
-        <Box>
-          <div className="imgBx">image here</div>
-          <div className="details">
-            <h2>Artist Three</h2>
-          </div>
-        </Box>
-        <Box>
-          <div className="imgBx">image here</div>
-          <div className="details">
-            <h2>Artist Four</h2>
-          </div>
-        </Box>
-        <Bio>
-          <h4>
-            Bacon ipsum dolor amet venison pancetta pork loin porchetta jowl
-            ribeye cupim tail rump tri-tip salami bresaola cow buffalo. Ham hock
-            drumstick doner ground round, shoulder short loin ball tip swine
-            sausage meatloaf cow.
-          </h4>
-        </Bio>
-      </Container>
-    </Main>
-  </Layout>
-);
+const Image = styled(Img)`
+  width: 15em;
+  height: 15em;
+  margin: 0 4em 0 0;
+  border-radius: 0.4em;
+  box-shadow: 8px 12px 22px 5px hsla(0, 0%, 0%, 0.21);
+
+  @media (max-width: 920px) {
+    width: 10em;
+    height: 10em;
+    border-radius: 0.4em;
+    box-shadow: 8px 12px 22px 5px hsla(0, 0%, 0%, 0.21);
+  }
+
+  @media (max-width: 1024px) {
+    width: 15em;
+    height: 15em;
+    border-radius: 0.4em;
+    box-shadow: 8px 12px 22px 5px hsla(0, 0%, 0%, 0.21);
+  }
+`;
+
+const BioBox = styled.div`
+  height: 300px;
+  margin: 1em;
+  font-family: Oswald;
+  font-size: 1em;
+  line-height: 110%;
+  letter-spacing: 5px;
+  color: #570b12;
+`;
+
+const BioContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-stert;
+  align-content: center;
+  padding: 1em;
+  margin: 2em 0 0 0;
+
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 700ms both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 700ms both;
+
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+export const Artists = () => {
+  const sanity = useStaticQuery(query);
+  const edges = sanity.allSanityArtist.edges;
+  return (
+    <Layout>
+      <Sidebar letters={artists} />
+      <Main>
+        <Container>
+          {edges.map(({ node }) => (
+            <Row>
+              <Column>
+                <PictureBox>
+                  <ImageContainer>
+                    <Image fluid={node.profileImage.asset.fluid} />
+                  </ImageContainer>
+                </PictureBox>
+              </Column>
+              <Column>
+                <BioBox>
+                  <BioContainer>
+                    <h4
+                      css={css`
+                        border-bottom: solid 1px black;
+                        padding: 0.2em;
+                      `}
+                    >
+                      {node.name}
+                    </h4>
+                    <h3>{node.bio}</h3>
+                    <SocialLinks />
+                  </BioContainer>
+                </BioBox>
+              </Column>
+            </Row>
+          ))}
+        </Container>
+      </Main>
+    </Layout>
+  );
+};
 
 export default Artists;
+
+export const query = graphql`
+  query ArtistQuery {
+    allSanityArtist {
+      edges {
+        node {
+          bio
+          name
+          profileImage {
+            asset {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
