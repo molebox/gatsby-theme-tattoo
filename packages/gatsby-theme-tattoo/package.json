@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "license": "MIT",
     "main": "index.js",
+    "author": "Hungry Bear Studio <roar@hungrybearstudio.com>",
     "repository": {
         "type": "git",
         "url": "https://github.com/molebox/gatsby-theme-tattoo"
