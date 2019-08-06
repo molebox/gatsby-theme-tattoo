@@ -11,7 +11,6 @@ const home = ["H", "O", "M", "E"];
 
 const Title = styled.h1`
   font-size: 5em;
-
   display: flex;
   justify-content: center;
 
@@ -55,7 +54,6 @@ const TitleAndLogo = styled.div`
 
 export const SubTitle = styled.h4`
   font-size: 2em;
-
   margin: 0 8em 5em 8em;
   padding: 2em;
 

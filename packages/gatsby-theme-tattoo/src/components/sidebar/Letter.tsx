@@ -11,12 +11,12 @@ const Letter = ({ children }: Props) => (
     sx={{
       color: "primary",
       fontFamily: "heading",
-      fontWeight: "body"
+      fontWeight: "body",
+      lineHeight: "body"
     }}
     css={css`
       grid-area: letter;
       font-size: 3.5em;
-      line-height: 100%;
       margin-top: 0.2em;
       margin-bottom: 0.2em;
       padding: 0.1em;

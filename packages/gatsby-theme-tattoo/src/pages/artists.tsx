@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "theme-ui";
+import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
@@ -13,10 +14,6 @@ const artists = ["A", "R", "T", "I", "S", "T", "S"];
 const Container = styled.div`
   margin: 5em;
   height: 100%;
-
-  // @media (max-width: 1024px) {
-  //   height: 100%;
-  // }
 
     /* iphone 5 */
     @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
@@ -47,16 +44,6 @@ const Container = styled.div`
     @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) { 
       margin 1em;
     }
-
-  //  /* iphone XS */
-  //   @media only screen and (min-device-width : 375px) and (max-device-height : 812px) and (-webkit-device-pixel-ratio : 3) { 
-
-  //   }
-
-  //  /* iphone XS Max */
-  //   @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 3) {
-
-  //    }
 `;
 
 const Row = styled.div`
@@ -134,11 +121,7 @@ const Image = styled(Img)`
 const BioBox = styled.div`
   height: 300px;
   margin: 1em;
-  font-family: Oswald;
   font-size: 1em;
-  line-height: 110%;
-  letter-spacing: 5px;
-  color: #570b12;
 `;
 
 const BioContainer = styled.div`
@@ -188,7 +171,14 @@ export const Artists = () => {
                 </PictureBox>
               </Column>
               <Column>
-                <BioBox>
+                <BioBox
+                  sx={{
+                    color: "primary",
+                    fontFamily: "body",
+                    lineHeight: "body",
+                    letterSpacing: "bio"
+                  }}
+                >
                   <BioContainer>
                     <h4
                       css={css`

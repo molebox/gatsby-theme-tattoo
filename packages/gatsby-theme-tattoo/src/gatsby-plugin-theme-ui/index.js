@@ -20,6 +20,7 @@ export default {
     heading: 1.125
   },
   letterSpacing: {
-    body: "2px"
+    body: "2px",
+    bio: "5px"
   }
 };
