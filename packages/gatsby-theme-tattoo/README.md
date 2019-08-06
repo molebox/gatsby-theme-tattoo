@@ -10,6 +10,8 @@ The theme uses [Theme-Ui](https://theme-ui.com/) for styling so is customizable.
 
 Add to your Gatsby sites gatsby-config.js just like you would with a plugin. The `SANITY_PROJECT_ID`, `SANITY_PROJECT_DATASET` are passed in as options from the consuming theme or site.
 
+DEMO: [https://gatsby-theme-tattoo.netlify.com/](https://gatsby-theme-tattoo.netlify.com/)
+
 ---
 
 It is recommended that you use environment variables to store your keys. You can store them in the root of your project in env.development or env.production files.
