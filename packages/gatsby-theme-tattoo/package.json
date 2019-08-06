@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "license": "MIT",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/molebox/gatsby-theme-tattoo"
+    },
     "scripts": {
         "build": "gatsby build",
         "dev": "gatsby develop",
@@ -22,6 +26,11 @@
             "git add"
         ]
     },
+    "keywords": [
+        "gatsby",
+        "gatsby-theme",
+        "gatsby-plugin"
+    ],
     "peerDependencies": {
         "gatsby": "^2.13.23",
         "react": "^16.8.6",
