@@ -1,4 +1,5 @@
-import * as React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import Sidebar from "../components/sidebar/Sidebar";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
@@ -9,12 +10,7 @@ import Img from "gatsby-image";
 const home = ["H", "O", "M", "E"];
 
 const Title = styled.h1`
-  font-family: Montserrat;
   font-size: 5em;
-  font-weight: 400;
-  line-height: 110%;
-  letter-spacing: 2px;
-  color: #570b12;
 
   display: flex;
   justify-content: center;
@@ -58,11 +54,7 @@ const TitleAndLogo = styled.div`
 `;
 
 export const SubTitle = styled.h4`
-  font-family: Oswald;
   font-size: 2em;
-  font-weight: 300;
-  line-height: 110%;
-  letter-spacing: 2px;
 
   margin: 0 8em 5em 8em;
   padding: 2em;
@@ -134,12 +126,32 @@ export const Index = () => {
             <div key={index}>
               <TitleAndLogo>
                 <Logo fluid={node.logo.asset.fluid} />
-                <Title>{node.title}</Title>
+                <Title
+                  sx={{
+                    color: "primary",
+                    fontFamily: "heading",
+                    fontWeight: "heading",
+                    lineHeight: "body",
+                    letterSpacing: "body"
+                  }}
+                >
+                  {node.title}
+                </Title>
               </TitleAndLogo>
               <ImageContainer>
                 <Image fluid={node.mainImage.asset.fluid} />
               </ImageContainer>
-              <SubTitle>{node.description}</SubTitle>
+              <SubTitle
+                sx={{
+                  color: "text",
+                  fontFamily: "body",
+                  fontWeight: "heading",
+                  lineHeight: "body",
+                  letterSpacing: "body"
+                }}
+              >
+                {node.description}
+              </SubTitle>
             </div>
           ))}
         </Content>

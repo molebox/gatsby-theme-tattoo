@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
-import SocialLinks from "./SiteSocialLinks";
+import SocialLinks from "./social/SiteSocialLinks";
 
 const Box = styled.footer`
   grid-area: footer;

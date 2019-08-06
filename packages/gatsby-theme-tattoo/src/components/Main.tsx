@@ -1,11 +1,11 @@
-import * as React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import styled from "@emotion/styled";
 import Footer from "./Footer";
 import Nav from "./navigation/Navbar";
 
 const Container = styled.div`
   grid-area: main;
-  background: white;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -37,7 +37,7 @@ interface Props {
 const Main = ({ children }: Props) => {
   return (
     <MainWrap>
-      <Container>
+      <Container sx={{ backgroundColor: "background" }}>
         <Nav pageWrapId={"PageWrap"} outerContainerId={"MainWrap"} />
         <PageWrap>
           <Content>{children}</Content>

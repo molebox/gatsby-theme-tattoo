@@ -58,7 +58,8 @@ module.exports = (options) => {
             options: {
               modules: [pkg.name]
             }
-        }
+        },
+        'gatsby-plugin-theme-ui'
     ]
   }
 }

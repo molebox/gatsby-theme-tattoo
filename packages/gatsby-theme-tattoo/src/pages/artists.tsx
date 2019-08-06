@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import Main from "../components/Main";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import SocialLinks from "./../components/ArtistsSocialLinks";
+import SocialLinks from "./../components/social/ArtistsSocialLinks";
 
 const artists = ["A", "R", "T", "I", "S", "T", "S"];
 
@@ -64,6 +64,7 @@ const Row = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin: 1em 0 8em 0;
 `;
 
 const Column = styled.div`

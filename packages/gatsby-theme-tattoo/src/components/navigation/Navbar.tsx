@@ -66,7 +66,7 @@ const Styles = styled.div`
     font-size: 2em;
   }
   .bm-morph-shape {
-    fill: #373a47;
+    fill: #1c1c1c;
   }
   .bm-item-list {
     color: #b8b7ad;
@@ -98,9 +98,9 @@ export default (props: any) => {
         <Link className="menu-item" to="/artists">
           ARTISTS
         </Link>
-        <Link className="menu-item" to="/styles">
+        {/* <Link className="menu-item" to="/styles">
           STYLES
-        </Link>
+        </Link> */}
         <Link className="menu-item" to="/gallery">
           GALLERY
         </Link>

@@ -1,4 +1,5 @@
-import * as React from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import styled from "@emotion/styled";
 import Section from "./Section";
 import Letter from "./Letter";
@@ -14,7 +15,6 @@ const Container = styled.div`
     ".";
 
   border-right: solid 3px black;
-  background: #ecebeb;
   height: 110vh;
 
   position: -webkit-sticky;
@@ -27,7 +27,7 @@ interface Props {
 }
 
 const Sidebar = ({ letters }: Props) => (
-  <Container>
+  <Container sx={{ backgroundColor: "muted" }}>
     <Section>
       {letters.map((letter, index) => (
         <div key={index}>
