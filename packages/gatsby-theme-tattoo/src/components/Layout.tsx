@@ -23,6 +23,8 @@ const Layout = ({ children }: Props) => (
           padding: 0;
         }
         scroll-behavior: smooth;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
       `}
     />
     {children}
