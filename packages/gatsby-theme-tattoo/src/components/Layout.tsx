@@ -22,6 +22,7 @@ const Layout = ({ children }: Props) => (
           margin: 0;
           padding: 0;
         }
+        scroll-behavior: smooth;
       `}
     />
     {children}
