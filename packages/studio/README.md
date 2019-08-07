@@ -1,11 +1,20 @@
-# Sanity Blogging Content Studio
+# gatsby-theme-tattoo-sanity
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+This is the sanity backend for use with the gatsby theme [gatsby-theme-tattoo](https://www.npmjs.com/package/gatsby-theme-tattoo).
 
-Now you can do the following things:
+# Usage
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- Check out the example frontend: [React/Next.js](https://github.com/sanity-io/tutorial-sanity-blog-react-next)
-- [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+From the command line run:
+
+- `git clone https://github.com/molebox/gatsby-theme-tattoo-sanity.git`
+- `cd gatsby-theme-tattoo-sanity` and run `yarn` to install the dependancies
+- run `sanity init`. It will ask if you want to reconfigure the studio, choose YES.
+- choose create a new project and follow the instructions to set up your new sanity studio backend!
+
+## Authors
+
+- **Rich Haines** - _Hungry Bear Studio_
+
+## License
+
+This project is licensed under the MIT License

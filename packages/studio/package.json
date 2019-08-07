@@ -1,11 +1,11 @@
 {
-  "name": "gatsbythemetatto",
+  "name": "gatsby-theme-tattoo-sanity",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "A Sanity backend for the gatsby-theme-tattoo",
   "main": "package.json",
   "author": "Hungry Bear Studio <roar@hungrybearstudio.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "start": "sanity start",
     "test": "sanity check"
