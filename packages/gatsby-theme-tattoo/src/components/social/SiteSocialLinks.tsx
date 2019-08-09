@@ -38,13 +38,13 @@ const SocialLinks = () => {
   return (
     <ImageContainer>
       <Link href={facebook} target="_blank" rel="noreferrer">
-        <FeatherIcon icon="facebook" size="25"/>
+        <FeatherIcon icon="facebook" size="20"/>
       </Link>
       <Link href={instagram} target="_blank" rel="noreferrer">
-        <FeatherIcon icon="instagram" size="25" />
+        <FeatherIcon icon="instagram" size="20" />
       </Link>
       <Link href={twitter} target="_blank" rel="noreferrer">
-        <FeatherIcon icon="twitter" size="25" />
+        <FeatherIcon icon="twitter" size="20" />
       </Link>
     </ImageContainer>
   );

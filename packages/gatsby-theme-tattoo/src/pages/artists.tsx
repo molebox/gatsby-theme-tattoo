@@ -12,38 +12,38 @@ import SocialLinks from "./../components/social/ArtistsSocialLinks";
 const artists = ["A", "R", "T", "I", "S", "T", "S"];
 
 const Container = styled.div`
-  margin: 5em;
+  // margin: 5em;
   height: 100%;
 
-    /* iphone 5 */
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
-      margin: .1em;
-     }
+    // /* iphone 5 */
+    // @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+    //   margin: .1em;
+    //  }
 
-    /* iphone 6, 6s, 7, 8 */
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
-      margin: .5em;
-    }
+    // /* iphone 6, 6s, 7, 8 */
+    // @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
+    //   margin: .5em;
+    // }
 
-    /* iphone 6+, 6s+, 7+, 8+ */
-    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
-      margin: .5em;
-     }
+    // /* iphone 6+, 6s+, 7+, 8+ */
+    // @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    //   margin: .5em;
+    //  }
 
-     /* Galaxy S5 */
-     @media only screen and (min-device-width: 360px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
-       margin .5em;
-     }
+    //  /* Galaxy S5 */
+    //  @media only screen and (min-device-width: 360px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+    //    margin .5em;
+    //  }
 
-    /* iphone X */
-    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
-      margin 1em;
-    }
+    // /* iphone X */
+    // @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+    //   margin 1em;
+    // }
 
-    /* iphone XR */
-    @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) { 
-      margin 1em;
-    }
+    // /* iphone XR */
+    // @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) { 
+    //   margin 1em;
+    // }
 `;
 
 const Row = styled.div`
@@ -51,7 +51,8 @@ const Row = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin: 1em 0 8em 0;
+  margin-top: 1em;
+  margin-bottom: 3em;
 `;
 
 const Column = styled.div`
@@ -129,8 +130,6 @@ const BioContainer = styled.div`
   flex-direction: column;
   justify-content: flex-stert;
   align-content: center;
-  padding: 1em;
-  margin: 2em 0 0 0;
 
   -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 700ms both;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) 700ms both;
